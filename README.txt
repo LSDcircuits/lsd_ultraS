@@ -16,7 +16,7 @@ documentation folder:
 schematics folder:
 
 - Schematics for use with RP2040-Zero
-- simulation to the H-bridge out put and amplifier
+- simulation to the H-bridge out put and amplifier (test - gains) 
 - spice models used
 
 Code dir:
