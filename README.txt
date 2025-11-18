@@ -9,7 +9,7 @@ this repository consist of:
 
 documentation folder:
 
-- Derivations and formulas used
+- Derivations and formulas used ( working on digitalizing this)
 - Code description
 - Measured results
 
@@ -17,6 +17,7 @@ schematics folder:
 
 - Schematics for use with RP2040-Zero
 - simulation to the H-bridge out put and amplifier
+- spice models used
 
 Code dir:
 
