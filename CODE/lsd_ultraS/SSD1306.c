@@ -4,17 +4,15 @@
 #include <string.h>
 #include <stdio.h>
 
-// I2C Configuration
+
 #define I2C_PORT i2c1
 #define SDA_PIN  14
 #define SCL_PIN  15
 
 static uint8_t framebuffer[OLED_WIDTH * OLED_HEIGHT / 8];
 
-// ==== BASIC FONT (5x7) ====
 static const uint8_t font5x7[][5] = {
-    // only 32-90 ASCII subset to keep small
-    // Each char = 5 bytes, each column (bit 0 = top pixel)
+
     {0,0,0,0,0}, // space
     {0x00,0x00,0x5F,0x00,0x00}, // !
     {0x00,0x07,0x00,0x07,0x00}, // "
@@ -63,10 +61,10 @@ static const uint8_t font5x7[][5] = {
     {0x7F,0x02,0x0C,0x02,0x7F}, // M
     {0x7F,0x04,0x08,0x10,0x7F}, // N
     {0x3E,0x41,0x41,0x41,0x3E}, // O
-    // ... (cut short for brevity, you’d fill more as needed)
+
 };
 
-// ==== I2C HELPERS ====
+// I2C HELPERS
 void oled_send_command(uint8_t cmd) {
     uint8_t buf[2] = {0x00, cmd};
     i2c_write_blocking(I2C_PORT, OLED_ADDR, buf, 2, false);
@@ -79,7 +77,7 @@ void oled_send_data(uint8_t *data, size_t len) {
     i2c_write_blocking(I2C_PORT, OLED_ADDR, buf, len+1, false);
 }
 
-// ==== OLED CORE ====
+// OLED CORE
 void oled_init() {
     // init I2C
     i2c_init(I2C_PORT, 400*1000);
@@ -124,7 +122,7 @@ void oled_update() {
     }
 }
 
-// ==== DRAW PIXELS & TEXT ====
+//  DRAW PIXELS & TEXT 
 void oled_set_pixel(int x, int y, bool color) {
     if (x < 0 || x >= OLED_WIDTH || y < 0 || y >= OLED_HEIGHT) return;
     int page = y / 8;
@@ -155,7 +153,7 @@ void oled_draw_string(int x, int y, const char *str) {
     }
 }
 
-// ==== PRINT TEMPERATURE CENTERED ====
+// PRINT TEMPERATURE CENTERED 
 void oled_print_value(float value) {
     char buf[16];
     sprintf(buf, "%06.2fCM", value);
