@@ -109,8 +109,10 @@ void pulse_gpio(){
         t1 = read_timer_raw_macro2();  // Time when echo is detected (rising edge)
         // Calculate time difference and distance
         double dt_us = (double)(t1 - t0);
+        uint64_t tim = read_timer_raw_macro2();
         double distance_cm = (dt_us * SOUND_SPEED_CM_PER_US) / 2.0;
         printf("Echo delay = %.0f us → distance = %.2f cm\n", dt_us, distance_cm);
+        printf("[%llu] [%.0f]\n", tim, distance_cm);
     done:
         oled_print_value(distance_cm);
         sleep_ms(10);  // avoid flooding
