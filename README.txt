@@ -1,7 +1,8 @@
 lsd_ultraS
 
 This project consist of using the BC557 & BC547 for pulsing and amplifying piezotransducers with the motive of measuring distance.
-this repository consist of:
+
+containing:
 
 - Documentation
 - Schematics for PCB & for simulation
@@ -9,7 +10,7 @@ this repository consist of:
 
 documentation folder:
 
-- Derivations and formulas used ( working on digitalizing this)
+- Derivations and formulas used (working on digitalizing this)
 - Code description
 - Measured results
 
@@ -26,6 +27,5 @@ Code dir:
 - C-SDK header files for Oled display -> from PICO_LSD (libs)
 - Cmake.txt file instrucitons for compiler
 
-documentation is still in progress & some code for different range of uses of this circuit.
 
 
