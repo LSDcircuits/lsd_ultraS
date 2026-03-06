@@ -17,15 +17,15 @@ documentation folder:
 schematics folder:
 
 - Schematics for use with RP2040-Zero (lsd_ultraS)
-- simulation to the H-bridge out put and amplifier (SIMULATIONS) 
-- spice models used for simulations
+- H-bridge output and amplifier (SIMULATIONS) 
+- Spice models used for simulations
 
 Code dir:
 
-- PIO program containing ASM for pulses
+- PIO program for pulses
 - C-SDK program executing the scheduling & logic
 - C-SDK header files for Oled display -> from PICO_LSD (libs)
-- Cmake.txt file instrucitons for compiler
+- Cmake.txt file
 
 
 
