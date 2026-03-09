@@ -10,7 +10,7 @@ containing:
 
 documentation folder:
 
-- Derivations and formulas used (working on digitalizing this)
+
 - Code description
 - Measured results
 
