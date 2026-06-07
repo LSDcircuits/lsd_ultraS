@@ -1,6 +1,7 @@
 lsd_ultraS
 
-This project consist of using the BC557 & BC547 for pulsing and amplifying piezotransducers with the motive of measuring distance.
+This project consist of using the BC557 & BC547 for pulsing and amplifying piezotransducers with the motive of measuring distance with the addition of using
+optocoupler to demostrate circuit isolation.
 
 containing:
 
@@ -10,9 +11,9 @@ containing:
 
 documentation folder:
 
-
 - Code description
 - Measured results
+- Circuit Description
 
 schematics folder:
 
